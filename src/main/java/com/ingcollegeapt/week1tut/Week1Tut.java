@@ -17,19 +17,21 @@ public class Week1Tut {
             switch (choice) {
                 case "1":
                     // TODO: Add topic
-                    System.out.println("Please enter your topicname");
+                    System.out.println("Please enter your topicnameee");
                     String topicName = scanner.next();
                     int topicid = topics.size()+1;
                     Topic newtopic = new Topic(topicid,topicName);
                     topics.add(newtopic);
-                   System.out.println("topics");
-                   for (Topic topic :topics){
-                       System.out.println(topic.getTopicId()+topic.getTopicName());
-                   }
-                   
+              
                     break;
                 case "2":
                     // TODO: View topics
+                    System.out.println("---Topics----");
+                   for (Topic topic :topics){
+                       System.out.println(topic.getTopicId()+" "+topic.getTopicName());
+                   }
+                      
+                    
                     break;
                 case "3":
                     // TODO: Add entry to a topic
