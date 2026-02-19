@@ -1,10 +1,13 @@
 package com.ingcollegeapt.week1tut;
-
+import com.ingcollegeapt.week1tut.model.Topic;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Week1Tut {
 
     private static final Scanner scanner = new Scanner(System.in);
+    private static final List<Topic> topics = new ArrayList();
 
     public static void main(String[] args) {
         while (true) {
@@ -14,6 +17,16 @@ public class Week1Tut {
             switch (choice) {
                 case "1":
                     // TODO: Add topic
+                    System.out.println("Please enter your topicname");
+                    String topicName = scanner.next();
+                    int topicid = topics.size()+1;
+                    Topic newtopic = new Topic(topicid,topicName);
+                    topics.add(newtopic);
+                   System.out.println("topics");
+                   for (Topic topic :topics){
+                       System.out.println(topic.getTopicId()+topic.getTopicName());
+                   }
+                   
                     break;
                 case "2":
                     // TODO: View topics
